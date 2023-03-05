@@ -51,6 +51,10 @@ a:hover {
   color: #57B287;
 }
 
+.footer-anchor-link:hover {
+  color: #0a0a0a;
+}
+
 ul {
   letter-spacing: 1px;
 }
