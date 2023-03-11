@@ -797,12 +797,36 @@ section {
   overflow: hidden;
 }
 
+#video kk {
+  background: url(../img/kk/vbg.jpg) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+}
+
 #video .overlay {
   background: rgba(244, 251, 243, 0.85);
   height: 100%;
 }
 
+#video kk .overlay {
+  background: rgba(244, 251, 243, 0.85);
+  height: 100%;
+}
+
 #video .overlay .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#71c55d 50%, rgba(113, 197, 93, 0.15) 52%);
+  border-radius: 50%;
+  display: block;
+  margin: 153px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#video kk .overlay .play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#71c55d 50%, rgba(113, 197, 93, 0.15) 52%);
