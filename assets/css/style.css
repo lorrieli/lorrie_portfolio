@@ -797,7 +797,7 @@ section {
   overflow: hidden;
 }
 
-#video kk {
+#videoo {
   background: url(../img/kk/vbg.jpg) center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -810,7 +810,7 @@ section {
   height: 100%;
 }
 
-#video kk .overlay {
+#videoo .overlay {
   background: rgba(244, 251, 243, 0.85);
   height: 100%;
 }
@@ -826,7 +826,7 @@ section {
   overflow: hidden;
 }
 
-#video kk .overlay .play-btn {
+#videoo .overlay .play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#71c55d 50%, rgba(113, 197, 93, 0.15) 52%);
@@ -838,6 +838,22 @@ section {
 }
 
 #video .overlay .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+}
+
+#videoo .overlay .play-btn::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -875,7 +891,35 @@ section {
   background: rgba(198, 16, 0, 0);
 }
 
+#videoo .overlay .play-btn:before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
 #video .overlay .play-btn:hover::after {
+  border-left: 15px solid #71c55d;
+  transform: scale(20);
+}
+
+#videoo .overlay .play-btn:hover::after {
   border-left: 15px solid #71c55d;
   transform: scale(20);
 }
@@ -898,6 +942,23 @@ section {
   border-radius: 0;
 }
 
+#videoo .overlay .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
 @-webkit-keyframes pulsate1 {
   0% {
     transform: scale(0.6, 0.6);
