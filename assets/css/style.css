@@ -532,7 +532,7 @@ span {
 @media (max-width: 575px) {
   #hero img {
     width: 70%;
-    height: 45%;
+    height: 40%;
     margin-bottom: 30px;
   }
 }
